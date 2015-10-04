@@ -16,12 +16,18 @@ class Book < ActiveRecord::Base
     end
   end
   before_validation :add_lovely_to_cat
-  after_destroy do |book|
-    Rails.logger.info "Book is deleted: #{book.attributes.inspect}"
+  after_destroy :if => :high_price? do |book|
+    Rails.logger.warn "Book with high price is deleted: #{book.attributes.inspect}"
+    Rails.logger.warn "Please Check!!"
   end
+
   def add_lovely_to_cat
     self.name = self.name.gsub(/Cat/) do |matched|
       "lovely #{matched}"
     end
+  end
+
+  def high_price?
+    price >= 5000
   end
 end
