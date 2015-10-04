@@ -15,4 +15,10 @@ class Book < ActiveRecord::Base
       book.errors[:name] << "I don't like exercise."
     end
   end
+  before_validation :add_lovely_to_cat
+  def add_lovely_to_cat
+    self.name = self.name.gsub(/Cat/) do |matched|
+      "lovely #{matched}"
+    end
+  end
 end
