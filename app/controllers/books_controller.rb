@@ -7,8 +7,10 @@ class BooksController < ApplicationController
       format.json
     end
   end
+
   private
-    def set_book
-      @book = Book.find(params[:id])
-    end
+
+  def set_book
+    @book = Book.find(params[:id])
+  end
 end

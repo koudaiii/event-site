@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resource :profile, only: %i{show edit update}
+  resource :profile, only: %i(show edit update)
 
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,16 +9,16 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-   get 'books/:id' => 'book#show'
-   resources :publishers do
-     member do
-       get 'detail'
-     end
+  get 'books/:id' => 'book#show'
+  resources :publishers do
+    member do
+      get 'detail'
+    end
 
-     collection do
-       get 'search'
-     end
-   end
+    collection do
+      get 'search'
+    end
+  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
