@@ -1,7 +1,11 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+
   def show
-    render :show
+    respond_to do |format|
+      format.html
+      format.csv
+    end
   end
 
   private
