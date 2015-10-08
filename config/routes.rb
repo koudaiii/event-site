@@ -7,10 +7,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  resources :books do
+    get 'books/:id' => 'books#show'
+  end
   # Example of regular route:
-  get 'books/:id' => 'book#show'
   resources :publishers do
+    resources :books
+
     member do
       get 'detail'
     end
