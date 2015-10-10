@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: books
+#
+#  id             :integer          not null, primary key
+#  name           :string
+#  published_on   :date
+#  price          :integer
+#  number_of_page :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  publisher_id   :integer
+#  status         :integer
+#
+
 class Book < ActiveRecord::Base
   enum status: { reservation: 0, now_on_sale: 1, end_of_print: 2 }
   scope :costly, -> { where('price > ?', 3000) }
