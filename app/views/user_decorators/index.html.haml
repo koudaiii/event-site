@@ -1,0 +1,25 @@
+%h1 Listing user_decorators
+
+%table
+  %thead
+    %tr
+      %th First name
+      %th Family name
+      %th Email
+      %th
+      %th
+      %th
+
+  %tbody
+    - @user_decorators.each do |user_decorator|
+      %tr
+        %td= user_decorator.first_name
+        %td= user_decorator.family_name
+        %td= user_decorator.email
+        %td= link_to 'Show', user_decorator
+        %td= link_to 'Edit', edit_user_decorator_path(user_decorator)
+        %td= link_to 'Destroy', user_decorator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User decorator', new_user_decorator_path

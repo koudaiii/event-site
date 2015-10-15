@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @user_decorator.first_name
+%p
+  %b Family name:
+  = @user_decorator.family_name
+%p
+  %b Email:
+  = @user_decorator.email
+
+= link_to 'Edit', edit_user_decorator_path(@user_decorator)
+\|
+= link_to 'Back', user_decorators_path
