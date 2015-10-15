@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_decorators
   resource :profile, only: %i(show edit update)
 
   resources :posts
