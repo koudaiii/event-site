@@ -17,6 +17,7 @@
         %td= user_decorator.family_name
         %td= user_decorator.email
         %td= link_to 'Show', user_decorator
+        %td= user_decorator.email_link("Send mail")
         %td= link_to 'Edit', edit_user_decorator_path(user_decorator)
         %td= link_to 'Destroy', user_decorator, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
