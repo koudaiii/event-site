@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :user_decorators
   resource :profile, only: %i(show edit update)
-
   resources :posts
+  resources :samples
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'books/:id' => 'books#show'
   end
   # Example of regular route:
+
   resources :publishers do
     resources :books
 
