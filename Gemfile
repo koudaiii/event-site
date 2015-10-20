@@ -64,6 +64,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'timecop'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :development do
