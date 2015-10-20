@@ -7,8 +7,6 @@ gem 'rails', '4.2.4'
 # Use active decorator
 gem 'active_decorator'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Haml
 gem "haml-rails"
 # Use SCSS for stylesheets
@@ -66,6 +64,8 @@ group :development, :test do
   gem 'timecop'
   gem 'hirb'
   gem 'hirb-unicode'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
