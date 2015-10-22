@@ -126,7 +126,8 @@
               %td
                 %h2
                   %img{:alt => "エントリーフォーム", :height => "18", :src => "https://js01.jposting.net/cookpad/u/euk7wrfmb63scxqmar4s/common/images/title_entryform.gif", :width => "160"}/
-                  %iframe{ src: "#{ENV['WANTEDLY_PLATFORM_URL']}/auto_fill?" + {last_name: "name_last", first_name:"name_first", first_name_katakana: "yomi_first", last_name_katakana: "yomi_last", birthday_year: "birthday_year",  birthday_month: "birthday_month", birthday_day: "birthday_day", gender: "sex", gender_male: "男", gender_female: "女", email: "email1", confirm_email: "confirm_email1", tel1: "tel1_1", tel2: "tel1_2", tel3: "tel1_3", statement: "free_answer1", github_url: "free_answer2", introduction: "free_answer3"}.to_query, seamless: "", style: "float: right;border: none;height: 40px;width: 240px;"}
+                  .wantedly-auto-fill{last_name: "name_last", first_name:"name_first", first_name_katakana: "yomi_first", last_name_katakana: "yomi_last", birthday_year: "birthday_year",  birthday_month: "birthday_month", birthday_day: "birthday_day", gender: "sex", gender_male: "男", gender_female: "女", email: "email1", confirm_email: "confirm_email1", tel1: "tel1_1", tel2: "tel1_2", tel3: "tel1_3", statement: "free_answer1", github_url: "free_answer2", introduction: "free_answer3"}
+                  = javascript_include_tag "https://platform.wantedly.com/auto_fill/script.js"
             %tr
               %td
                 %img{:alt => "", :height => "1", :src => "https://js01.jposting.net/cookpad/u/euk7wrfmb63scxqmar4s/common/images/img_line_dashed.gif", :width => "620"}/
