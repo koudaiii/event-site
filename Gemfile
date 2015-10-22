@@ -38,6 +38,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use sidekiq
 gem 'sidekiq'
 
+# ER
+gem 'rails-erd'
+
 # Use Unicorn as the app server
 #gem 'unicorn'
 gem 'puma'
