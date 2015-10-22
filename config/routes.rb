@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   resources :user_decorators
   resource :profile, only: %i(show edit update)
   resources :posts
-  resources :samples
+  resources :samples do
+    collection do
+      get :apply_by_cookpad_jposting
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
