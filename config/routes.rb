@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcom/index'
+
   resources :user_decorators
   resource :profile, only: %i(show edit update)
   resources :posts
