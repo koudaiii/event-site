@@ -14,9 +14,13 @@
 
 
   %body
-
-    = yield
-
+    .header
+      %div{ class: 'navbar navbar-default', role: 'navigation' }
+        %div{ class: 'container' }
+          %div{ class: 'navbar-header' }
+            = link_to 'AwesomeEvents', :root, class: 'navbar-brand'
+    %div{ class: 'container' }
+      = yield
     /
       Javascripts
       \==================================================
