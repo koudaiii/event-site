@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029002321) do
+ActiveRecord::Schema.define(version: 20151029002830) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -77,5 +77,7 @@ ActiveRecord::Schema.define(version: 20151029002321) do
     t.string   "nickname"
     t.string   "image_url"
   end
+
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
 
 end
