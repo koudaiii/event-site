@@ -18,7 +18,11 @@
       %div{ class: 'navbar navbar-default', role: 'navigation' }
         %div{ class: 'container' }
           %div{ class: 'navbar-header' }
-            = link_to 'AwesomeEvents', :root, class: 'navbar-brand'
+            %span{ class: 'sr-only' }
+            %span{ class: 'icon-bar' }
+            %span{ class: 'icon-bar' }
+            %span{ class: 'icon-bar' }
+              = link_to 'AwesomeEvents', :root, class: 'navbar-brand'
     %div{ class: 'container' }
       = yield
     /
