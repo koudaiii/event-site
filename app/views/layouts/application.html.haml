@@ -14,15 +14,19 @@
 
 
   %body
-    .header
-      %div{ class: 'navbar navbar-default', role: 'navigation' }
-        %div{ class: 'container' }
-          %div{ class: 'navbar-header' }
-            %span{ class: 'sr-only' }
+    %header.navbar.navbar-default{:role => "navigation"}
+      %div{ class: 'container' }
+        %div{ class: 'navbar-header' }
+          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span{ class: 'sr-only' } Toggle navigation
             %span{ class: 'icon-bar' }
             %span{ class: 'icon-bar' }
             %span{ class: 'icon-bar' }
-              = link_to 'AwesomeEvents', :root, class: 'navbar-brand'
+          = link_to 'AwesomeEvents', :root, class: 'navbar-brand'
+        %div{ class: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' }
+          %ul{ class: 'nav navbar-nav navbar-right' }
+            %li
+              = link_to 'Twitterでログイン', '/auth/twitter'
     %div{ class: 'container' }
       = yield
     /
