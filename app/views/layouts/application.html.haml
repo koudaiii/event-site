@@ -26,7 +26,10 @@
         %div{ class: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' }
           %ul{ class: 'nav navbar-nav navbar-right' }
             %li
-              = link_to 'Twitterでログイン', '/auth/twitter'
+              - if logged_in?
+                = link_to 'ログアウト', '/logout'
+              - else
+                = link_to 'Twitterでログイン', '/auth/twitter'
     %div{ class: 'container' }
     - if flash[:notice]
       %div{ class: 'alert alert-success' }
