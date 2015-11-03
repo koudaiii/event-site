@@ -4,8 +4,8 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :owner_id
       t.string :name
       t.string :place
-      t.datatime :start_time
-      t.datatime :end_time
+      t.datetime :start_time
+      t.datetime :end_time
       t.text :content
 
       t.timestamps null: false
