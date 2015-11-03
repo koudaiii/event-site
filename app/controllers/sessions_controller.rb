@@ -4,4 +4,9 @@ class SessionsController < ApplicationController
     session[:useri_id] = user.id
     redirect_to root_path, notice: 'ログインしました'
   end
+
+  def destroy
+    reset_session
+    redirect_to root_path, notic: 'ログアウトしました'
+  end
 end
