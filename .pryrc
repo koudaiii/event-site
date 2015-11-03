@@ -10,8 +10,8 @@ if defined? Hirb
     def enable_output_method
       @output_method = true
       @old_print = Pry.config.print
-      Pry.config.print = proc do |output, value|
-        Hirb::View.view_or_page_output(value) || @old_print.call(output, value)
+      Pry.config.print = proc do |*argv|
+        Hirb::View.view_or_page_output(argv[1]) || @old_print.call(*argv)
       end
     end
 
