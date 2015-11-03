@@ -28,6 +28,9 @@
             %li
               = link_to 'Twitterでログイン', '/auth/twitter'
     %div{ class: 'container' }
+    - if flash[:notice]
+      %div{ class: 'alert alert-success' }
+        = flash[:notice]
       = yield
     /
       Javascripts
