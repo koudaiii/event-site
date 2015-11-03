@@ -8,7 +8,7 @@ gem 'rails', '4.2.4'
 gem 'active_decorator'
 
 # Use Haml
-gem "haml-rails"
+gem 'haml-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,7 +46,7 @@ gem 'sidekiq'
 gem 'rails-erd'
 
 # Use Unicorn as the app server
-#gem 'unicorn'
+# gem 'unicorn'
 gem 'puma'
 
 gem 'pg'
