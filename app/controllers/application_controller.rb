@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def current_user
+    return unless session[:useri_id]
+    @current_user ||= User.find(session[:user_id])
+  end
+
   def logged_in?
     !!session[:useri_id]
   end
