@@ -26,8 +26,10 @@
         %div{ class: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' }
           %ul{ class: 'nav navbar-nav navbar-right' }
             %li
+              = link_to 'イベントを作る', new_event_path
+            %li
               - if logged_in?
-                = link_to 'ログアウト', '/logout'
+                = link_to 'ログアウト', logout_path
               - else
                 = link_to 'Twitterでログイン', '/auth/twitter'
     %div{ class: 'container' }
