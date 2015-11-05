@@ -8,12 +8,12 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    return unless session[:useri_id]
+    return unless session[:user_id]
     @current_user ||= User.find(session[:user_id])
   end
 
   def logged_in?
-    !!session[:useri_id]
+    !!session[:user_id]
   end
 
   def authenticate
