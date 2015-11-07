@@ -1,7 +1,14 @@
 - now = Time.zone.now
 
-%div.page-heder
+%div.page-header
   %h1 イベント作成
 = form_for(@event, class: 'form-horizotal', role: 'form') do |f|
   - if @event.errors.any?
     %div{ class: 'alert alert-danger' }
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li =msg
+
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
