@@ -33,12 +33,12 @@
               - else
                 = link_to 'Twitterでログイン', '/auth/twitter'
     %div{ class: 'container' }
-    - if flash[:notice]
-      %div{ class: 'alert alert-success' }
-        = flash[:notice]
-    - if flash[:alert]
-      %div{ class: 'alert alert-danger' }
-        = flash[:alert]
+      - if flash[:notice]
+        %div{ class: 'alert alert-success' }
+          = flash[:notice]
+      - if flash[:alert]
+        %div{ class: 'alert alert-danger' }
+          = flash[:alert]
       = yield
     /
       Javascripts
