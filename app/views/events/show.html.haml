@@ -9,3 +9,20 @@
     = link_to "https://twitter.com/#{@event.owner.nickname}" do
       = image_tag @event.owner.image_url
       = "@#{@event.owner.nickname}"
+%div{ class: 'panel panel-default' }
+  %div.panel-heading
+    開催時間
+  %div.panel-body
+    = @event.start_time.strftime('%Y%m%d %H:%M')
+    \-
+      = @event.end_time.strftime('%Y%m%d %H:%M')
+%div{ class: 'panel panel-default' }
+  %div.panel-heading
+    開催場所
+  %div.panel-body
+    = @event.place
+%div{ class: 'panel panel-default' }
+  %div.panel-heading
+    イベント内容
+  %div.panel-body
+    = @event.content
