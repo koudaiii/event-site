@@ -15,9 +15,9 @@
       %div.panel-heading
         開催時間
       %div.panel-body
-        = @event.start_time.strftime('%Y%m%d %H:%M')
+        = @event.start_time.strftime('%Y/%m/%d %H:%M')
         \-
-        = @event.end_time.strftime('%Y%m%d %H:%M')
+        = @event.end_time.strftime('%Y/%m/%d %H:%M')
     %div{ class: 'panel panel-default' }
       %div.panel-heading
         開催場所
