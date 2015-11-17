@@ -22,6 +22,9 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   def create
     @event = current_user.created_events.build(event_params)
     if @event.save
