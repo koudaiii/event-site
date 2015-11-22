@@ -34,3 +34,5 @@
       = link_to 'イベントを削除する', event_path(@event), class: 'btn btn-danger btn-lg btn-block', method: :delete, data: {  confirm: '本当に削除しますか?' }
     - if logged_in?
       %button.btn.btn-primary.btn-lg.btn-block{"data-target": "#createTicket", "data-toggle": "modal"}
+        参加する
+      %div.modal.fade{ id: 'createTicket', tabindex: '-1', role: 'dialog', "aria-labelledby": 'dialogHeader', 'aria-hidden': 'true' }
