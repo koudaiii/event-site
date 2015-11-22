@@ -36,3 +36,9 @@
       %button.btn.btn-primary.btn-lg.btn-block{"data-target": "#createTicket", "data-toggle": "modal"}
         参加する
       %div.modal.fade{ id: 'createTicket', tabindex: '-1', role: 'dialog', "aria-labelledby": 'dialogHeader', 'aria-hidden': 'true' }
+        %div.modal-dialog
+          %div.modal-content
+            %div.modal-header
+              %button.close{ 'data-dismiss': 'modal', 'aria-hidden': "true"}&times
+              %h4.modal-title{ id: 'dialogHeader' }
+                参加コメント
