@@ -33,12 +33,18 @@
       = link_to 'イベントを編集する', edit_event_path(@event), class: 'btn btn-info btn-lg btn-block'
       = link_to 'イベントを削除する', event_path(@event), class: 'btn btn-danger btn-lg btn-block', method: :delete, data: {  confirm: '本当に削除しますか?' }
     - if logged_in?
-      %button.btn.btn-primary.btn-lg.btn-block{"data-target": "#createTicket", "data-toggle": "modal"}
-        参加する
-      %div.modal.fade{ id: 'createTicket', tabindex: '-1', role: 'dialog', "aria-labelledby": 'dialogHeader', 'aria-hidden': 'true' }
+      %button.btn.btn-primary.btn-lg.btn-block{"data-target": "#createTicket", "data-toggle": "modal" } 参加する
+      #createTicket.modal.fade{"aria-hidden": "true", "aria-labelledby": "dialogHeader", role: "dialog", tabindex: "-1"}
         %div.modal-dialog
           %div.modal-content
             %div.modal-header
-              %button.close{ 'data-dismiss': 'modal', 'aria-hidden': "true"}&times
-              %h4.modal-title{ id: 'dialogHeader' }
-                参加コメント
+              %button.close{"aria-hidden": "true", "data-dismiss": "modal", type: "button"} &times;
+              %h4#dialogHeader.modal-title 参加コメント
+            = form_for(@event.tickets.build, url: event_tickets_path(@event), remote: true) do |f|
+              %div.modal-body
+                = f.text_field :comment, class: 'form-control'
+              %div.modal-footer
+                %button.btn.btn-default{"data-dismiss": "modal", type: "button"} キャンセル
+                = f.button '送信', class: 'btn btn-primary', data: { disable_with: '送信中・・・'}
+    - else
+      = link_to '参加する', new_event_ticket_path(@event), class: 'btn btn-primary btn-lg btn-block'
