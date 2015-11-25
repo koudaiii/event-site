@@ -53,7 +53,7 @@
       %div.panel-heading 参加者
     %div.panel-body
       %ul.list-unstyled
-        = @tickets.each do |ticket|
+        - @tickets.each do |ticket|
           %li
             = link_to(url_for_twitter(ticket.user)) do
               = image_tag ticket.user.image_url, width: 20, height: 20
