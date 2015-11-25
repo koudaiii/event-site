@@ -32,7 +32,9 @@
     - if @event.created_by?(current_user)
       = link_to 'イベントを編集する', edit_event_path(@event), class: 'btn btn-info btn-lg btn-block'
       = link_to 'イベントを削除する', event_path(@event), class: 'btn btn-danger btn-lg btn-block', method: :delete, data: {  confirm: '本当に削除しますか?' }
-    - if logged_in?
+    - if @ticket
+      = link_to '参加をキャンセルする', event_path(@event, @ticket), method: :delete, class: 'btn btn-warning btn-lg btn-block'
+    - elsif logged_in?
       %button.btn.btn-primary.btn-lg.btn-block{"data-target": "#createTicket", "data-toggle": "modal" } 参加する
       #createTicket.modal.fade{"aria-hidden": "true", "aria-labelledby": "dialogHeader", role: "dialog", tabindex: "-1"}
         %div.modal-dialog
