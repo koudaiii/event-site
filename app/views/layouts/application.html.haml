@@ -29,6 +29,7 @@
               = link_to 'イベントを作る', new_event_path
             %li
               - if logged_in?
+                = link_to '退会', retire_user_path
                 = link_to 'ログアウト', logout_path
               - else
                 = link_to 'Twitterでログイン', '/auth/twitter'
