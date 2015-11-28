@@ -60,6 +60,8 @@ gem 'prmd'
 
 # Use dotenv
 gem 'dotenv-rails'
+
+# Use annotate
 gem 'annotate'
 
 # Use bullet
