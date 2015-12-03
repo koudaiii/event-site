@@ -10,7 +10,7 @@ class WelcomController < ApplicationController
   private
 
   def search_params
-    params.require(:q).permit!
+    params.require(:q).permit(:name, :start_time_gteq)
   rescue
     { start_time_gteq: Time.zone.now }
   end
