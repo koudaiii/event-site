@@ -29,6 +29,9 @@ gem 'kaminari'
 # Use Seach
 gem 'ransack'
 
+# Use img uploarder
+gem 'carrierwave'
+
 # Use Omniauth
 gem 'omniauth'
 gem 'omniauth-twitter'
