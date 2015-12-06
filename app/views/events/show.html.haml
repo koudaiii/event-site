@@ -4,6 +4,9 @@
 
 %div.row
   %div.col-md-8
+    - if @event.event_image?
+      %div.thumbnail
+        = image_tag @event.event_image.url
     %div.panel.panel-default
       %div.panel-heading
         主催者
