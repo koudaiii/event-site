@@ -10,6 +10,8 @@ class EventImageUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog
 
+  process :resize_to_limit => [1130,1130]
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
