@@ -32,6 +32,9 @@ gem 'ransack'
 # Use img uploarder
 gem 'carrierwave'
 
+# Use resize
+gem 'mini_magick'
+
 # Use Omniauth
 gem 'omniauth'
 gem 'omniauth-twitter'
