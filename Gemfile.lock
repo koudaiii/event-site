@@ -361,7 +361,11 @@ DEPENDENCIES
   rails-erd
   rails_12factor
   ransack
+  rspec-core
+  rspec-expectations
+  rspec-mocks
   rspec-rails
+  rspec-support
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sidekiq
