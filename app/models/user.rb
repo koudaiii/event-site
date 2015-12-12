@@ -9,6 +9,10 @@
 #  admin      :boolean
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  provider   :string
+#  uid        :string
+#  nickname   :string
+#  image_url  :string
 #
 
 class User < ActiveRecord::Base
