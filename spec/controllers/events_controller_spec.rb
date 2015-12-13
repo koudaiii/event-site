@@ -24,6 +24,10 @@ RSpec.describe EventsController, type: :controller do
       it '@eventに、新規Eventオブジェクトが格納されていること' do
         expect(assigns(:event)).to be_a_new(Event)
       end
+
+      it 'newテンプレートをrenderしていること' do
+        expect(response).to render_template :new
+      end
     end
   end
 end
