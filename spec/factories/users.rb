@@ -16,7 +16,7 @@
 #
 
 FactoryGirl.define do
-  factory :user do
+  factory :user, aliases: [:owner] do
     provider 'twitter'
     sequence(:uid) { |i| "uid#{i}" }
     sequence(:nickname) { |i| "nickname#{i}" }
