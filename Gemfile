@@ -100,6 +100,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'database_cleaner'
 end
 
 group :development do
