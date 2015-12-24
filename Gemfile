@@ -23,6 +23,9 @@ gem 'twitter-bootswatch-rails', '~> 3.3.4'
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
 
+# sprockets-rails http://qiita.com/Esfahan/items/55bba810e7cbc30de254
+gem 'sprockets-rails', '2.3.3'
+
 # Use Pagenation
 gem 'kaminari'
 
