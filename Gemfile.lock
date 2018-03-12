@@ -206,8 +206,8 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (3.0.1)
     puma (3.6.2)
-    rack (1.6.8)
-    rack-protection (1.5.3)
+    rack (1.6.9)
+    rack-protection (2.0.1)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -362,7 +362,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mini_magick
-  nokogiri (~> 1.8.1)
   omniauth
   omniauth-twitter
   pg
